@@ -1,0 +1,166 @@
+:root{
+    --PrimaryColor: hsl(123, 41%, 33%);
+    --HoverColor: hsl(147, 71%, 55%);
+    --skyBlue: skyblue;
+    --whiteColor: white;
+    --blackColor: black;
+    --textColor: hsla(0, 15%, 47%, 0.909);
+    --bgColor: hsl(0, 25%, 97%);
+    --greyText: grey;
+    --inputColor: hsl(330, 15%, 67%);
+
+
+    /* Font and Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize:.813rem;
+    --smallestFontSize: .75rem;
+}
+.topSect{
+    .headerSect{
+        display: flex;
+        justify-content: space-between;
+
+        .title{
+
+            h1{
+                font-size:var(--h1FontSize);
+                color: var(--blackColor);
+                font-weight: 700;
+    
+            }
+            p{
+                font-size: var(--normalFontSize);
+                color: var(--textColor);
+                font-weight: 500;
+            }
+        }
+        .searchBar{
+            padding: 1rem 2rem;
+            background: var(--whiteColor);
+            border-radius: 5px;
+            gap: 1rem;
+            box-shadow: 0 2px 4px var(--inputColor);
+
+            input{
+                border: none;
+                outline: none;
+                background: none;
+            }
+
+            .icon{
+                color: var(--textColor);
+                &:hover{
+                    color: var(--PrimaryColor);
+                }
+            }
+        }
+
+        .adminDiv{
+            gap: 1rem;
+
+            .icon{
+                font-size: var(--biggestFontSize);
+                background: var(--whiteColor);
+                border-radius: 5px;
+                padding: 5px;
+                box-shadow: 0 2px 4px var(--inputColor);
+                color: var(--textColor);
+            }
+            .adminImage{
+                border: 3px solid var(--whiteColor);
+                border-radius: 10px;
+                width: 2.5rem;
+                overflow: hidden;
+                box-shadow: 0 2px 4px var(--inputColor);
+                cursor: pointer;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    .cardSect{
+        margin-top: 3rem;
+        gap: 1rem;
+
+        .rightCard{
+            position: relative;
+            flex-basis: 70%;
+            height: 200px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: auto;
+            padding: 2rem;
+            border-radius: 1rem;
+            overflow: hidden; 
+
+
+            h1, p, btn{
+                z-index: 100;
+            }
+            h1{
+                font-size: var(--h1FontSize);
+                color: var(-whiteColor);
+                font-weight: 800;
+            }
+            p{
+                padding: 1rem;
+                color: var(--skyBlue);
+                font-weight: 500;
+            }
+            .buttons{
+                gap: 1rem;
+
+                .btn{
+                    box-shadow: none;
+                    padding: .6rem 1.5rem;
+                    color: var(--PrimaryColor);
+                    border: 2px solid transparent;
+                }
+
+                .transparent{
+                    background: none;
+                    border: 2px solid var(--skyBlue);
+                    color: var(--skyBlue);
+
+                    &:hover{
+                        background: var(--skyBlue);
+                        color: var(--PrimaryColor);
+                    }
+                }
+            }
+        
+        }
+    }
+}
+
+// MEDIA QUERY
+
+@media screen and (max-width: 918px) {
+    .headerSect{
+        .searchBar{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 918px){
+    .headerSect{
+        .adminDiv{
+            display: none;
+        }
+
+        .title{
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
